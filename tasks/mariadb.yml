@@ -1,0 +1,12 @@
+- name: Install MariaDB and configure it
+  apt:
+    name:
+      - mariadb-server
+
+- name: Gather service facts
+  service_facts:
+
+- name: Check if MariaDB service is running
+  debug:
+    msg: "MariaDB service is running"
+  when: "'mariadb' in ansible_facts.services and ansible_facts.services['mariadb'].state == 'running'"
