@@ -9,7 +9,8 @@
       changed_when: False
 
   tasks:
-    - name: include tasks
-      include_tasks:
-        - tasks/packages.yml
-        - tasks/mariadb.yml
+    - name: include packages tasks
+      include_tasks: tasks/packages.yml
+
+    - name: include mariadb tasks
+      include_tasks: tasks/mariadb.yml
