@@ -10,3 +10,10 @@
   debug:
     msg: "MariaDB service is running"
   when: "'mariadb' in ansible_facts.services and ansible_facts.services['mariadb'].state == 'running'"
+
+- name: Ensure MariaDB service is running
+  service:
+    name: mariadb
+    state: started
+    enabled: yes
+
