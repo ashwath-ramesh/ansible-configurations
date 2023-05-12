@@ -3,3 +3,4 @@
     name:
       - htop
       - lvm2
+      - mariadb-server
