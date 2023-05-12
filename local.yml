@@ -8,11 +8,6 @@
         update_cache: yes
       changed_when: False
 
-    - name: upgrade all packages
-      apt:
-        upgrade: 'yes'
-      changed_when: False
-
   tasks:
     - name: include tasks
       include_tasks: tasks/packages.yml
